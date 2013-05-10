@@ -188,6 +188,8 @@ def main():
     #header
     s.recv(2000)
 
+    i = 1;
+
     while True:
         gridString = s.recv(2000)
         gridString = gridString.replace('\n', '')
@@ -203,7 +205,8 @@ def main():
         print bsol
 
         SendGrid(bsol, s)
-       # print s.recv(2000)
+        print "Solved " + str(i) + " many  times"
+        i += 1
 
 if __name__ == '__main__':
     main()
