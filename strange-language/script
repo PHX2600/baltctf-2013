@@ -1,0 +1,72 @@
+$module "module1";
+$use StdIO;
+$use String;
+$use Compare;
+$use Convert;
+$func Main =e; 
+$func Chk e=e; 
+$func Cmp e=e; 
+$func Go e=e; 
+$func Mag e=e; 
+$func Rps e=e; 
+$func Rps2 e=e;
+
+Main
+	 = <Go<Chk(<ReadLine>)('0123456789abcdef')()()>>;
+
+Mag {
+	s1 e2 ' ' e3=<Mag e2 ' ' s1 e3>;
+	' ' e1 = <Rps e1>;
+	};
+
+Go {
+	'yes' e1 = <Go<Compare (<Mag e1 ' '>)('3b4cdca9b5748cba3b578d696c7186a0f068e72696387a1c0128b7a190232b1c')>>;
+	'=' = <PrintLn 'Wellcome!!!'>;
+	e1 = <PrintLn 'Bad key'>;
+};
+
+
+Chk {
+	()(e1)()()= 'no';
+	(e1)(e2)()()= <Chk (e1)(e2)(e1)()>;
+	(s1 e2)(e3 s1 e4)(e5)(e6)= <Chk (e2)(e3 s1 e4)(e5)(e6 s1)>;
+	(e1)(e2)(e3)(e4) = <Cmp (e3) (e4)>;		
+};
+
+Cmp {
+	(e1)(e1) = 'yes' <Mag e1 ' '>e1;
+	(e1)(e2) = 'no';
+};
+
+Rps {
+	e1 '0' e2 = <Rps e1 'F' e2>;
+	e1 '1' e2 = <Rps e1 'E' e2>;
+	e1 '2' e2 = <Rps e1 'D' e2>;
+	e1 '3' e2 = <Rps e1 'C' e2>;
+	e1 '4' e2 = <Rps e1 'B' e2>;
+	e1 '5' e2 = <Rps e1 'A' e2>;
+	e1 'a' e2 = <Rps e1 'z' e2>;
+	e1 'b' e2 = <Rps e1 'y' e2>;
+	e1 'c' e2 = <Rps e1 'x' e2>;
+	e1 'd' e2 = <Rps e1 'w' e2>;
+	e1 'e' e2 = <Rps e1 'v' e2>;
+	e1 'f' e2 = <Rps e1 'u' e2>;
+	e1 = <Rps2 e1>;
+	};
+
+Rps2 {
+	e1 'F' e2 = <Rps2 e1 'f' e2>;
+	e1 'E' e2 = <Rps2 e1 'e' e2>;
+	e1 'D' e2 = <Rps2 e1 'd' e2>;
+	e1 'C' e2 = <Rps2 e1 'c' e2>;
+	e1 'B' e2 = <Rps2 e1 'b' e2>;
+	e1 'A' e2 = <Rps2 e1 'a' e2>;
+	e1 'z' e2 = <Rps2 e1 '0' e2>;
+	e1 'y' e2 = <Rps2 e1 '1' e2>;
+	e1 'x' e2 = <Rps2 e1 '2' e2>;
+	e1 'w' e2 = <Rps2 e1 '3' e2>;
+	e1 'v' e2 = <Rps2 e1 '4' e2>;
+	e1 'u' e2 = <Rps2 e1 '5' e2>;	
+	e1 = e1;
+	};
+
